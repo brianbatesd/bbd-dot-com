@@ -256,11 +256,15 @@ and (max-device-width : 480px) {
 
 #main {
   font-size: 1.25em;
-  width: 90%;
+  width: 75%;
 }
 
 img.logo {
   margin: 1em;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 p.footer {
