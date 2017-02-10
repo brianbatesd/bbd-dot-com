@@ -1,3 +1,3 @@
 # bbd-dot-com
 
-Template and design for brianbatesd.com portfolio site.
+Single page portfolio built on HTML5 boilerplate.
