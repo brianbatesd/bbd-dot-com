@@ -147,34 +147,6 @@ h1 {
 	font-size: 1.5em;
   font-weight: 100;
 	line-height: 1.1em;
-  background: -webkit-linear-gradient(#ccc, #181818);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/*
- * Additional cross-browser support for text gradient fade:
- * http://stackoverflow.com/questions/8005447/cross-browser-text-gradient-in-pure-css-without-using-background-image
- *
- */
-
-.fade {
-  position: relative;
-}
-
-.fade:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#00181818',GradientType=0 );
-  background:    -moz-linear-gradient(top, rgba(204,204,204,0) 0%, rgba(24,24,24,1) 100%);
-  background:     -ms-linear-gradient(top, rgba(204,204,204,0) 0%, rgba(24,24,24,1) 100%);
-  background:      -o-linear-gradient(top, rgba(204,204,204,0) 0%, rgba(24,24,24,1) 100%);
-  background:         linear-gradient(top, rgba(204,204,204,0) 0%, rgba(24,24,24,1) 100%);
 }
 
 img.logo {
