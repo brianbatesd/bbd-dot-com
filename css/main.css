@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -25,12 +25,12 @@ html {
  */
 
 ::-moz-selection {
-    background: #fff;
+    background: #b3d4fc;
     text-shadow: none;
 }
 
 ::selection {
-    background: #fff;
+    background: #b3d4fc;
     text-shadow: none;
 }
 
@@ -96,64 +96,66 @@ textarea {
    ========================================================================== */
 
 body {
-	background: #181818;
-	color: #ccc;
-	font-family: 'Questrial', sans-serif;
-}
-
-a, a:link, a:visited, a:active {
-	color: #8a8a8a;
-	text-decoration: none;
-  transition: background .3s ease-in-out;
-  -moz-transition: background .3s ease-in-out;
-  -webkit-transition: background .3s ease-in-out;
-}
-
-a.dribbble {
-  color: #ea4c89;
-}
-
-a.twitter {
-  color: #55acee;
-}
-
-a:hover {
-	background: #8a8a8a;
-	color: #181818;
-}
-
-a.dribbble:hover {
-  background: #ea4c89;
-  color: #181818;
-}
-
-a.twitter:hover {
-  background: #55acee;
-  color: #181818;
+  	background: #181818;
+  	color: #ccc;
+  	font-family: 'Questrial', sans-serif;
 }
 
 #main {
-	margin: 0 auto;
-	width: 95%;
-  text-align: center;
-	font-size: 2.5em;
-	line-height: 1.4em;
+  	margin: 0 auto;
+  	width: 95%;
+    text-align: center;
+  	font-size: 2.5em;
+  	line-height: 1.4em;
 }
 
 h1 {
-	font-size: 1.5em;
-  font-weight: 100;
-	line-height: 1.1em;
+  	font-size: 1.5em;
+    font-weight: 100;
+  	line-height: 1.1em;
 }
 
 img.logo {
-	width: 75px;
+	  width: 125px;
+    margin-top: .75em;
+    margin-bottom: -.7em;
 }
 
 p.footer {
-	font-size: .5em;
-	line-height: 1.4em;
-	padding-bottom: 1.5em;
+  	font-size: .5em;
+  	line-height: 1.4em;
+    padding-bottom: 1.5em;
+}
+
+a, a:link, a:visited, a:active {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+}
+
+a.dribbble {
+    color: #ea4c89;
+}
+
+a.twitter {
+    color: #55acee;
+}
+
+a:hover {
+  	background: #8a8a8a;
+  	color: #181818;
+}
+
+a.dribbble:hover {
+   background: #ea4c89;
+   color: #181818;
+}
+
+a.twitter:hover {
+   background: #55acee;
+   color: #181818;
 }
 
 /* ==========================================================================
@@ -161,7 +163,7 @@ p.footer {
    ========================================================================== */
 
 /*
- * Hide visually and from screen readers:
+ * Hide visually and from screen readers
  */
 
 .hidden {
@@ -247,29 +249,6 @@ p.footer {
     /* Style adjustments for high resolution devices */
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-
-#main {
-  font-size: 1.25em;
-  width: 75%;
-}
-
-img.logo {
-  margin: 1em;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-p.footer {
-  font-size: 1em;
-}
-
-}
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -279,7 +258,9 @@ p.footer {
 @media print {
     *,
     *:before,
-    *:after {
+    *:after,
+    *:first-letter,
+    *:first-line {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
