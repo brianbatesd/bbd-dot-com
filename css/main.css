@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -20,7 +20,9 @@ html {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
- * These selection rule sets have to be separate.
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
  * Customize the background color to match your design.
  */
 
@@ -95,68 +97,68 @@ textarea {
    Bb custom styles
    ========================================================================== */
 
-body {
-  	background: #181818;
-  	color: #ccc;
-  	font-family: 'Questrial', sans-serif;
-}
+   body {
+     	background: #181818;
+     	color: #ccc;
+     	font-family: 'Questrial', sans-serif;
+   }
 
-#main {
-  	margin: 0 auto;
-  	width: 95%;
-    text-align: center;
-  	font-size: 2.5em;
-  	line-height: 1.4em;
-}
+   #main {
+     	margin: 0 auto;
+     	width: 95%;
+       text-align: center;
+     	font-size: 2.5em;
+     	line-height: 1.4em;
+   }
 
-h1 {
-  	font-size: 1.5em;
-    font-weight: 100;
-  	line-height: 1.1em;
-}
+   h1 {
+     	font-size: 1.5em;
+       font-weight: 100;
+     	line-height: 1.1em;
+   }
 
-img.logo {
-	  width: 125px;
-    margin-top: 1em;
-    margin-bottom: -.7em;
-}
+   img.logo {
+   	  width: 125px;
+       margin-top: 1em;
+       margin-bottom: -.7em;
+   }
 
-p.footer {
-  	font-size: .5em;
-  	line-height: 1.4em;
-    padding-bottom: 1.5em;
-}
+   p.footer {
+     	font-size: .5em;
+     	line-height: 1.4em;
+       padding-bottom: 1.5em;
+   }
 
-a, a:link, a:visited, a:active {
-    color: #8a8a8a;
-    text-decoration: none;
-    transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    -webkit-transition: background .3s ease-in-out;
-}
+   a, a:link, a:visited, a:active {
+       color: #8a8a8a;
+       text-decoration: none;
+       transition: background .3s ease-in-out;
+       -moz-transition: background .3s ease-in-out;
+       -webkit-transition: background .3s ease-in-out;
+   }
 
-a.dribbble {
-    color: #ea4c89;
-}
+   a.dribbble {
+       color: #ea4c89;
+   }
 
-a.twitter {
-    color: #55acee;
-}
+   a.twitter {
+       color: #55acee;
+   }
 
-a:hover {
-  	background: #8a8a8a;
-  	color: #181818;
-}
+   a:hover {
+     	background: #8a8a8a;
+     	color: #181818;
+   }
 
-a.dribbble:hover {
-   background: #ea4c89;
-   color: #181818;
-}
+   a.dribbble:hover {
+      background: #ea4c89;
+      color: #181818;
+   }
 
-a.twitter:hover {
-   background: #55acee;
-   color: #181818;
-}
+   a.twitter:hover {
+      background: #55acee;
+      color: #181818;
+   }
 
 /* ==========================================================================
    Helper classes
@@ -172,7 +174,11 @@ a.twitter:hover {
 
 /*
  * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
 .visuallyhidden {
@@ -184,6 +190,7 @@ a.twitter:hover {
     padding: 0;
     position: absolute;
     width: 1px;
+    white-space: nowrap; /* 1 */
 }
 
 /*
@@ -200,6 +207,7 @@ a.twitter:hover {
     overflow: visible;
     position: static;
     width: auto;
+    white-space: inherit;
 }
 
 /*
@@ -252,18 +260,16 @@ a.twitter:hover {
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
+   https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
     *,
     *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
+    *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -291,6 +297,9 @@ a.twitter:hover {
         content: "";
     }
 
+    pre {
+        white-space: pre-wrap !important;
+    }
     pre,
     blockquote {
         border: 1px solid #999;
@@ -309,10 +318,6 @@ a.twitter:hover {
     tr,
     img {
         page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
     }
 
     p,
