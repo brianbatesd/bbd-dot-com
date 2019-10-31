@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Brian Bates -- developer, designer -- @brianbatesd
 
 # THANKS
 
-    <name>
+    Brian Bates
 
 # TECHNOLOGY COLOPHON
 
