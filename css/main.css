@@ -98,68 +98,70 @@ textarea {
    Bb Custom Styles
    ========================================================================== */
 
- body {
-   	background: #181818;
-   	color: #ccc;
-   	font-family: 'Questrial', sans-serif;
- }
+body {
+	background: #181818;
+	color: #ccc;
+	font-family: 'Questrial', sans-serif;
+}
 
- article {
-   	margin: 0 auto;
-   	width: 95%;
-    text-align: center;
-   	font-size: 2.5em;
-   	line-height: 1.4em;
- }
+article {
+	margin: 0 auto;
+	width: 95%;
+  text-align: center;
+	font-size: 2.5em;
+	line-height: 1.4em;
+}
 
- h1 {
-   	font-size: 1.5em;
-    font-weight: 100;
-   	line-height: 1.1em;
- }
+h1 {
+	font-size: 1.5em;
+  font-weight: 100;
+	line-height: 1.1em;
+}
 
- img.logo {
- 	  width: 125px;
-     margin-top: 1em;
-     margin-bottom: -.7em;
- }
+img.logo {
+  width: 125px;
+  margin-top: 1em;
+  margin-bottom: -.7em;
+}
 
- p.main {
-   	font-size: .5em;
-   	line-height: 1.4em;
-     padding-bottom: 1.5em;
- }
+p.main {
+	font-size: .5em;
+	line-height: 1.4em;
+  padding-bottom: 1.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+}
 
- a, a:link, a:visited, a:active {
-     color: #8a8a8a;
-     text-decoration: none;
-     transition: background .3s ease-in-out;
-     -moz-transition: background .3s ease-in-out;
-     -webkit-transition: background .3s ease-in-out;
- }
+a, a:link, a:visited, a:active {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out;
+}
 
- a.dribbble {
-     color: #ea4c89;
- }
+a.dribbble {
+  color: #ea4c89;
+}
 
- a.twitter {
-     color: #55acee;
- }
+a.twitter {
+  color: #55acee;
+}
 
- a:hover {
-   	background: #8a8a8a;
-   	color: #181818;
- }
+a:hover {
+	background: #8a8a8a;
+	color: #181818;
+}
 
- a.dribbble:hover {
-    background: #ea4c89;
-    color: #181818;
- }
+a.dribbble:hover {
+  background: #ea4c89;
+  color: #181818;
+}
 
- a.twitter:hover {
-    background: #55acee;
-    color: #181818;
- }
+a.twitter:hover {
+  background: #55acee;
+  color: #181818;
+}
 
 /* ==========================================================================
    Helper classes
